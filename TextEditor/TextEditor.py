@@ -6,9 +6,8 @@ from icon import img
 root = Tk()
 root.geometry("500x400")
 root.title("Text Editor")
-ico = open('TextEditor.ico', 'wb+')
-ico.write(base64.b64decode(img))
-ico.close()
+with open('TextEditor.ico', 'wb+') as ico:
+    ico.write(base64.b64decode(img))
 root.iconbitmap('TextEditor.ico')
 os.remove('TextEditor.ico')
 
